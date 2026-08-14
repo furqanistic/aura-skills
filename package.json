@@ -1,0 +1,31 @@
+{
+  "name": "aura-skills",
+  "version": "1.0.0",
+  "description": "Install the Aura Skills bundle for AI coding agents.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furqanistic/aura-skills.git"
+  },
+  "homepage": "https://github.com/furqanistic/aura-skills#readme",
+  "bugs": "https://github.com/furqanistic/aura-skills/issues",
+  "keywords": [
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "cursor",
+    "backend"
+  ],
+  "bin": {
+    "aura-skills": "bin/aura-skills.js"
+  },
+  "files": [
+    "bin/aura-skills.js"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

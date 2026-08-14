@@ -4,6 +4,51 @@
 
 ## Install
 
+### Branded installer
+
+After the `aura-skills` package is published to npm, install from any terminal with:
+
+```bash
+npx aura-skills
+```
+
+Arguments are forwarded to the Skills CLI, so global Codex installation works with:
+
+```bash
+npx aura-skills -a codex -g
+```
+
+The launcher delegates to `npx skills add furqanistic/aura-skills`. The upstream
+Skills CLI requires GitHub sources in `owner/repository` format, so
+`npx skills add aura-skills` is not a supported portable alias.
+
+### Codex (direct install)
+
+Install all four skills into your personal Codex skills directory:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo furqanistic/aura-skills \
+  --path skills/project-structure \
+         skills/security-check \
+         skills/database-optimization \
+         skills/better-backend
+```
+
+Restart Codex after installation. You can then invoke a skill explicitly with
+`$project-structure`, `$security-check`, `$database-optimization`, or
+`$better-backend`. Codex may also select them automatically from their descriptions.
+
+To install only one skill, pass only its path, for example:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo furqanistic/aura-skills \
+  --path skills/security-check
+```
+
+### Cross-agent installer
+
 Uses the open [`npx skills add`](https://github.com/vercel-labs/skills) CLI — the same tool [Taste Skill](https://github.com/Leonxlnx/taste-skill) uses. It scans the `skills/` folder in this repo and gives you an **interactive picker** to choose skills and editors.
 
 ### Interactive install (recommended)
@@ -73,13 +118,20 @@ Install all four for the full Aura Skills bundle, or pick the ones you need.
 ```
 skills/
 ├── project-structure/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/architecture-guide.md
 ├── security-check/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/security-guide.md
 ├── database-optimization/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/database-guide.md
 └── better-backend/
-    └── SKILL.md
+    ├── SKILL.md
+    └── agents/openai.yaml
 ```
 
 ## Local development
@@ -89,6 +141,20 @@ Test before publishing:
 ```bash
 npx skills add . --list
 npx skills add . --skill "project-structure"
+```
+
+Test the npm package contents before publishing:
+
+```bash
+npm pack --dry-run
+node --check bin/aura-skills.js
+```
+
+Publish the branded installer:
+
+```bash
+npm login
+npm publish
 ```
 
 Resolve a skill path locally:
