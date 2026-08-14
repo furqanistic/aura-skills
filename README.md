@@ -1,6 +1,14 @@
 # Aura Skills
 
-**Backend skills for AI coding agents.** Portable, agent-neutral `SKILL.md` files for any tool that supports the [Agent Skills](https://agentskills.io/) format, including Codex, Cursor, Claude Code, OpenCode, Gemini CLI, GitHub Copilot, and many others.
+**Production-ready backend skills for AI coding agents.** Aura Skills helps agents organize backend architecture, audit security, optimize databases, improve code quality, and build secure Stripe integrations.
+
+The package includes five skills:
+
+- `architect-backend` — organize backend architecture and files
+- `audit-backend-security` — find and fix backend security risks
+- `optimize-database` — improve queries, indexes, caching, and scalability
+- `improve-backend-code` — write clean, maintainable, professional backend code
+- `integrate-stripe` — build or repair secure Stripe payment flows
 
 ## Compatibility
 
@@ -12,97 +20,70 @@ the complete skill.
 
 ## Install
 
-### Branded installer
+Install Aura Skills from npm or GitHub. Both methods provide the same skills,
+agent picker, installation options, and project/global scopes.
 
-After the `aura-skills` package is published to npm, install from any terminal with:
+| Method | Command |
+| --- | --- |
+| npm | `npx aura-skills` |
+| GitHub | `npx skills add furqanistic/aura-skills` |
 
-```bash
-npx aura-skills
-```
-
-Arguments are forwarded to the Skills CLI, so global Codex installation works with:
-
-```bash
-npx aura-skills -a codex -g
-```
-
-The launcher delegates to `npx skills add furqanistic/aura-skills`. The upstream
-Skills CLI requires GitHub sources in `owner/repository` format, so
-`npx skills add aura-skills` is not a supported portable alias.
-
-### Codex (direct install)
-
-Install all five skills into your personal Codex skills directory:
-
-```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo furqanistic/aura-skills \
-  --path skills/architect-backend \
-         skills/audit-backend-security \
-         skills/optimize-database \
-         skills/improve-backend-code \
-         skills/integrate-stripe
-```
-
-Restart Codex after installation. You can then invoke a skill explicitly with
-`$architect-backend`, `$audit-backend-security`, `$optimize-database`,
-`$improve-backend-code`, or `$integrate-stripe`. Codex may also select them automatically
-from their descriptions.
-
-To install only one skill, pass only its path, for example:
-
-```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo furqanistic/aura-skills \
-  --path skills/audit-backend-security
-```
-
-### Cross-agent installer
-
-Uses the open [`npx skills add`](https://github.com/vercel-labs/skills) CLI — the same tool [Taste Skill](https://github.com/Leonxlnx/taste-skill) uses. It scans the `skills/` folder in this repo and gives you an **interactive picker** to choose skills and editors.
-
-### Interactive install (recommended)
-
-Run this in a normal terminal (PowerShell, Terminal.app, etc.):
-
-```bash
-npx skills add furqanistic/aura-skills
-```
-
-The CLI will prompt you to:
+Run either command in Terminal, PowerShell, or another command prompt. The
+interactive installer will ask you to:
 
 1. **Select skills** — pick one, some, or all 5
 2. **Select agents** — Cursor, Codex, OpenCode, VS Code / Copilot, Claude Code, Gemini CLI, and [68+ others](https://github.com/vercel-labs/skills#supported-agents)
 3. **Choose install method** — symlink (recommended) or copy
 4. **Choose scope** — project (default) or global (`-g`)
 
-You do **not** need to build your own installer. The picker is built into `npx skills`.
+The npm command is a short launcher for the same GitHub-backed Skills CLI flow.
 
-### Quick install (no prompts)
+### Install every skill
+
+| Method | Command |
+| --- | --- |
+| npm | `npx aura-skills --all` |
+| GitHub | `npx skills add furqanistic/aura-skills --all` |
+
+### List skills without installing
+
+| Method | Command |
+| --- | --- |
+| npm | `npx aura-skills --list` |
+| GitHub | `npx skills add furqanistic/aura-skills --list` |
+
+### Install one skill
+
+Replace `<skill-name>` with a name from the skills table below.
+
+| Method | Command |
+| --- | --- |
+| npm | `npx aura-skills --skill <skill-name>` |
+| GitHub | `npx skills add furqanistic/aura-skills --skill <skill-name>` |
+
+Example:
 
 ```bash
-# All 5 skills, all detected agents
-npx skills add furqanistic/aura-skills --all
+# npm
+npx aura-skills --skill integrate-stripe
 
-# List available skills without installing
-npx skills add furqanistic/aura-skills --list
+# GitHub
+npx skills add furqanistic/aura-skills --skill integrate-stripe
 ```
 
-Install one skill by its **install name** (the `name:` field in SKILL frontmatter):
+### Install for specific agents
+
+Pass one or more supported agent names:
 
 ```bash
-npx skills add furqanistic/aura-skills --skill "architect-backend"
-npx skills add furqanistic/aura-skills --skill "audit-backend-security"
-npx skills add furqanistic/aura-skills --skill "optimize-database"
-npx skills add furqanistic/aura-skills --skill "improve-backend-code"
-npx skills add furqanistic/aura-skills --skill "integrate-stripe"
-```
+# npm
+npx aura-skills -a codex -a cursor -a opencode
 
-Target specific agents without the interactive picker:
-
-```bash
+# GitHub
 npx skills add furqanistic/aura-skills -a codex -a cursor -a opencode
 ```
+
+Add `-g` to either command to install globally for the selected agents.
 
 You can also copy any `SKILL.md` into your project or provide it to another compatible AI agent.
 
