@@ -1,5 +1,5 @@
 ---
-name: project-structure
+name: architect-backend
 description: Expert backend architecture and project structure for scalable, secure, maintainable applications. Inspects the existing stack, prefers cohesive feature modules, and adapts to Express, NestJS, Fastify, Django, Rails, Go, and other backends. Use when designing a backend, reviewing architecture, reorganizing folders, refactoring modules, or implementing a production-grade backend feature.
 ---
 

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Security Check"
-  short_description: "Audit and harden backend security"
-  default_prompt: "Use $security-check to audit this backend and prioritize validated vulnerabilities."

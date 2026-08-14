@@ -1,4 +1,4 @@
-# Backend Architecture Skill
+# Backend Architecture Guide
 
 ## Contents
 

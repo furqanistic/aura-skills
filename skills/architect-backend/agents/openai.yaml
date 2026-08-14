@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architect Backend"
+  short_description: "Design maintainable backend architecture"
+  default_prompt: "Use $architect-backend to design, organize, or improve this backend architecture."

@@ -1,5 +1,5 @@
 ---
-name: database-optimization
+name: optimize-database
 description: Database performance optimization for MongoDB, PostgreSQL, MySQL, MariaDB, SQLite, Redis, and ORMs such as Prisma, Drizzle, TypeORM, Sequelize, and Mongoose. Use when diagnosing slow queries, designing indexes, fixing pagination or N+1 problems, reviewing data models, planning caching, improving migration safety, or scaling database workloads.
 ---
 

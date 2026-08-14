@@ -1,4 +1,4 @@
-# Database Optimization Skill
+# Database Optimization Guide
 
 ## Contents
 

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Better Backend"
-  short_description: "Improve backend code quality safely"
-  default_prompt: "Use $better-backend to refactor this backend code for clarity and maintainability."

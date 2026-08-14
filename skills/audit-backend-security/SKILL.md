@@ -1,5 +1,5 @@
 ---
-name: security-check
+name: audit-backend-security
 description: Backend security review and hardening for authentication, authorization, tokens, sessions, secrets, validation, injection, payments, uploads, webhooks, data exposure, rate limits, and deployment configuration. Use when asked to audit, security-review, harden, threat-check, or inspect backend code for vulnerabilities across Express, NestJS, Django, Rails, Go, and other stacks.
 ---
 

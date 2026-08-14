@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Database"
+  short_description: "Diagnose and improve database performance"
+  default_prompt: "Use $optimize-database to diagnose and improve this database workload."

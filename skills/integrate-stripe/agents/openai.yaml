@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integrate Stripe"
+  short_description: "Build secure production-ready Stripe payments"
+  default_prompt: "Use $integrate-stripe to design and implement a secure Stripe integration for this application."

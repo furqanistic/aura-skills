@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Backend Security"
+  short_description: "Audit and harden backend security"
+  default_prompt: "Use $audit-backend-security to audit this backend and prioritize validated vulnerabilities."

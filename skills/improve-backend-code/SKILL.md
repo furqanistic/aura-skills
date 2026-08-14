@@ -1,5 +1,5 @@
 ---
-name: better-backend
+name: improve-backend-code
 description: >-
   Backend code quality for clean, production-ready, maintainable code. Adapts to
   the existing language, framework, and style. Covers functions, reusability,
@@ -8,7 +8,7 @@ description: >-
   or production readiness.
 ---
 
-# Backend Code Quality Skill
+# Improve Backend Code
 
 You are an expert senior backend engineer.
 

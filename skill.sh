@@ -1,16 +1,28 @@
 #!/usr/bin/env bash
 
-# Local skill registry — resolve SKILL.md paths during development
-declare -A SKILLS=(
-  [project-structure]="skills/project-structure/SKILL.md"
-  [security-check]="skills/security-check/SKILL.md"
-  [database-optimization]="skills/database-optimization/SKILL.md"
-  [better-backend]="skills/better-backend/SKILL.md"
-)
-
-if [[ $# -eq 0 ]]; then
-  echo "Usage: source ./skill.sh <skill-name>"
-  echo "Available skills: ${!SKILLS[@]}"
-else
-  echo "${SKILLS[$1]}"
-fi
+# Local skill registry — resolve SKILL.md paths during development.
+case "${1:-}" in
+  architect-backend)
+    echo "skills/architect-backend/SKILL.md"
+    ;;
+  audit-backend-security)
+    echo "skills/audit-backend-security/SKILL.md"
+    ;;
+  optimize-database)
+    echo "skills/optimize-database/SKILL.md"
+    ;;
+  improve-backend-code)
+    echo "skills/improve-backend-code/SKILL.md"
+    ;;
+  integrate-stripe)
+    echo "skills/integrate-stripe/SKILL.md"
+    ;;
+  "")
+    echo "Usage: source ./skill.sh <skill-name>"
+    echo "Available skills: architect-backend audit-backend-security optimize-database improve-backend-code integrate-stripe"
+    ;;
+  *)
+    echo "Unknown skill: $1" >&2
+    exit 1
+    ;;
+esac

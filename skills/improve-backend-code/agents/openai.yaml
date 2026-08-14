@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Backend Code"
+  short_description: "Improve backend code quality safely"
+  default_prompt: "Use $improve-backend-code to refactor this backend code for clarity and maintainability."

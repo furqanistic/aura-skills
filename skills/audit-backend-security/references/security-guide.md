@@ -1,4 +1,4 @@
-# Backend Security Auditor Skill
+# Backend Security Audit Guide
 
 ## Contents
 
