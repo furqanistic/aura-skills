@@ -1,14 +1,18 @@
 # Aura Skills
 
-**Production-ready backend skills for AI coding agents.** Aura Skills helps agents organize backend architecture, audit security, optimize databases, improve code quality, and build secure Stripe integrations.
+**Production-ready development skills for AI coding agents.** Aura Skills helps agents build accurate interfaces, organize backend architecture, audit security, optimize databases, improve code quality, and create secure payment integrations.
 
-The package includes five skills:
+The package includes nine skills:
 
-- `architect-backend` — organize backend architecture and files
+- `architect-backend` — design new backends or safely improve existing ones in any stack
 - `audit-backend-security` — find and fix backend security risks
-- `optimize-database` — improve queries, indexes, caching, and scalability
+- `optimize-database` — audit and improve database correctness, indexes, speed, reliability, and scale
 - `improve-backend-code` — write clean, maintainable, professional backend code
 - `integrate-stripe` — build or repair secure Stripe payment flows
+- `integrate-1bill` — build or repair Pakistan 1LINK 1BILL collections
+- `integrate-easypaisa` — build or repair Easypaisa merchant payment flows
+- `integrate-jazzcash` — build or repair JazzCash merchant payment flows
+- `screenshot-to-code` — recreate screenshots as responsive, accessible frontend code
 
 ## Compatibility
 
@@ -31,7 +35,7 @@ agent picker, installation options, and project/global scopes.
 Run either command in Terminal, PowerShell, or another command prompt. The
 interactive installer will ask you to:
 
-1. **Select skills** — pick one, some, or all 5
+1. **Select skills** — pick one, some, or all 9
 2. **Select agents** — Cursor, Codex, OpenCode, VS Code / Copilot, Claude Code, Gemini CLI, and [68+ others](https://github.com/vercel-labs/skills#supported-agents)
 3. **Choose install method** — symlink (recommended) or copy
 4. **Choose scope** — project (default) or global (`-g`)
@@ -91,21 +95,29 @@ You can also copy any `SKILL.md` into your project or provide it to another comp
 
 | Skill (folder) | Install name | Description |
 | --- | --- | --- |
-| **architect-backend** | `architect-backend` | Sets up and organizes your backend files for a clean, scalable structure. |
+| **architect-backend** | `architect-backend` | Designs new backends or gives existing backends a safe, stack-specific improvement path. |
 | **audit-backend-security** | `audit-backend-security` | Analyzes your backend for security risks and explains how to fix them. |
-| **optimize-database** | `optimize-database` | Improves database speed with better queries, indexes, pagination, caching, and safe migrations. |
+| **optimize-database** | `optimize-database` | Audits indexes, queries, schemas, concurrency, caching, migrations, backups, security, and scaling. |
 | **improve-backend-code** | `improve-backend-code` | Helps you write clean, professional, maintainable, and scalable backend code. |
 | **integrate-stripe** | `integrate-stripe` | Builds secure Stripe payments, subscriptions, webhooks, and marketplace flows. |
+| **integrate-1bill** | `integrate-1bill` | Builds reliable Pakistan 1LINK 1BILL inquiry, payment, status, and reconciliation flows. |
+| **integrate-easypaisa** | `integrate-easypaisa` | Builds secure Easypaisa Mobile Account and OTC payment flows. |
+| **integrate-jazzcash** | `integrate-jazzcash` | Builds secure JazzCash wallet, voucher, card, and hosted payment flows. |
+| **screenshot-to-code** | `screenshot-to-code` | Recreates UI screenshots as accurate, responsive, accessible frontend code. |
 
 ### Which one should I use?
 
-- **architect-backend** — organize your backend files and folders
+- **architect-backend** — design a backend or safely improve the one you already have
 - **audit-backend-security** — find and fix backend security risks
-- **optimize-database** — improve database speed and scalability
+- **optimize-database** — run a complete database health, performance, and scaling audit
 - **improve-backend-code** — write cleaner, professional backend code
 - **integrate-stripe** — connect Stripe securely and handle the full payment lifecycle
+- **integrate-1bill** — accept and reconcile Pakistan 1LINK 1BILL collections
+- **integrate-easypaisa** — accept Easypaisa merchant payments and handle callbacks, status, and reconciliation
+- **integrate-jazzcash** — accept JazzCash merchant payments and handle hashes, callbacks, status, and reconciliation
+- **screenshot-to-code** — turn a UI screenshot or mockup into working frontend code
 
-Install all five for the full Aura Skills bundle, or pick the ones you need.
+Install all nine for the full Aura Skills bundle, or pick the ones you need.
 
 ## Repo structure
 
@@ -126,10 +138,27 @@ skills/
 ├── improve-backend-code/
 │   ├── SKILL.md
 │   └── agents/openai.yaml
-└── integrate-stripe/
-    ├── SKILL.md
-    ├── agents/openai.yaml
-    └── references/
+├── screenshot-to-code/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/
+└── payment-integrations/
+    ├── integrate-stripe/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    ├── integrate-1bill/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    ├── integrate-easypaisa/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    └── integrate-jazzcash/
+        ├── SKILL.md
+        ├── agents/openai.yaml
+        └── references/
 ```
 
 ## Local development

@@ -2,6 +2,22 @@
 
 All notable changes to Aura Skills are documented here.
 
+## [1.1.0] - 2026-08-15
+
+### Added
+
+- **integrate-1bill** — secure Pakistan 1LINK 1BILL collection workflows
+- **integrate-easypaisa** — Easypaisa merchant payment integration and recovery workflows
+- **integrate-jazzcash** — JazzCash wallet, voucher, card, and hosted payment workflows
+- **screenshot-to-code** — responsive, accessible screenshot reconstruction with rendered fidelity checks
+
+### Changed
+
+- Grouped Stripe, 1BILL, Easypaisa, and JazzCash under `skills/payment-integrations/`
+- Expanded backend architecture guidance for existing projects and all technology stacks
+- Expanded database optimization coverage across correctness, indexes, concurrency, reliability, and scale
+- Updated npm/GitHub installation and publishing guidance
+
 ## [1.0.0] - 2026-06-28
 
 ### Changed

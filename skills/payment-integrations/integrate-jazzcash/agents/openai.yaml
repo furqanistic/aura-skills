@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integrate JazzCash"
+  short_description: "Build secure JazzCash payment integrations"
+  default_prompt: "Use $integrate-jazzcash to inspect, design, or repair a secure JazzCash merchant integration."

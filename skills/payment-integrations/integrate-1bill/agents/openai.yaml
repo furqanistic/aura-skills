@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integrate 1BILL"
+  short_description: "Build reliable Pakistan 1BILL integrations"
+  default_prompt: "Use $integrate-1bill to inspect, design, or repair a secure 1LINK 1BILL integration."

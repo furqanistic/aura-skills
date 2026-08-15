@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screenshot to Code"
+  short_description: "Turn UI screenshots into faithful frontend code"
+  default_prompt: "Use $screenshot-to-code to recreate this screenshot as responsive, accessible frontend code."

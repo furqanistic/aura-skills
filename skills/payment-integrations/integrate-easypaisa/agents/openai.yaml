@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integrate Easypaisa"
+  short_description: "Build secure Easypaisa payment integrations"
+  default_prompt: "Use $integrate-easypaisa to inspect, design, or repair a secure Easypaisa merchant integration."
