@@ -1,7 +1,10 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 
-const { resolveNpxInvocation } = require("../bin/aura-skills.js");
+const {
+  buildInstallerArgs,
+  resolveNpxInvocation,
+} = require("../bin/aura-skills.js");
 
 test("uses npx directly on non-Windows platforms", () => {
   assert.deepEqual(resolveNpxInvocation({ platform: "linux" }), {
@@ -33,4 +36,16 @@ test("reports a useful error when npm's CLI cannot be found on Windows", () => {
       }),
     /Could not locate npm's npx-cli\.js/,
   );
+});
+
+test("selects the nested Skills CLI package explicitly", () => {
+  assert.deepEqual(buildInstallerArgs([], ["--list"]), [
+    "--yes",
+    "--package=skills",
+    "--",
+    "skills",
+    "add",
+    "furqanistic/aura-skills",
+    "--list",
+  ]);
 });

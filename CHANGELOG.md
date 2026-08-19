@@ -2,6 +2,12 @@
 
 All notable changes to Aura Skills are documented here.
 
+## [1.1.2] - 2026-08-20
+
+### Fixed
+
+- Select the nested `skills` package explicitly so `npx aura-skills` works when npm passes its outer package context to the launcher
+
 ## [1.1.1] - 2026-08-20
 
 ### Fixed

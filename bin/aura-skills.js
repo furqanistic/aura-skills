@@ -38,6 +38,19 @@ function resolveNpxInvocation({
   return { command: execPath, prefixArgs: [npxCliPath] };
 }
 
+function buildInstallerArgs(prefixArgs, forwardedArgs) {
+  return [
+    ...prefixArgs,
+    "--yes",
+    "--package=skills",
+    "--",
+    "skills",
+    "add",
+    "furqanistic/aura-skills",
+    ...forwardedArgs,
+  ];
+}
+
 function main() {
   let invocation;
 
@@ -51,14 +64,7 @@ function main() {
   const forwardedArgs = process.argv.slice(2);
   const result = spawnSync(
     invocation.command,
-    [
-      ...invocation.prefixArgs,
-      "--yes",
-      "skills",
-      "add",
-      "furqanistic/aura-skills",
-      ...forwardedArgs,
-    ],
+    buildInstallerArgs(invocation.prefixArgs, forwardedArgs),
     { stdio: "inherit" },
   );
 
@@ -74,4 +80,4 @@ if (require.main === module) {
   process.exit(main());
 }
 
-module.exports = { main, resolveNpxInvocation };
+module.exports = { buildInstallerArgs, main, resolveNpxInvocation };
