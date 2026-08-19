@@ -2,6 +2,12 @@
 
 All notable changes to Aura Skills are documented here.
 
+## [1.1.1] - 2026-08-20
+
+### Fixed
+
+- Launch the Skills installer through npm's JavaScript CLI on Windows instead of trying to execute the `npx.cmd` shim directly
+
 ## [1.1.0] - 2026-08-15
 
 ### Added
